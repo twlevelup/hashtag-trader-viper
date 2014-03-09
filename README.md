@@ -29,3 +29,7 @@ _note: any commands run on the command line are prefixed with `$ ` - you won't n
 
 ### Run the app
 1. `$ bundle exec rake server`
+
+
+### Heroku
+- [Guide for Ruby applications](https://devcenter.heroku.com/articles/getting-started-with-ruby)
