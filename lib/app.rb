@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'erb'
 
-class MyApp < Sinatra::Application
+class HashTagTrader < Sinatra::Base
   enable :sessions
 
 end

@@ -1,6 +1,6 @@
 
-class MyApp < Sinatra::Application
+class HashTagTrader < Sinatra::Base
   get '/' do
-    'Welcome to MyApp'
+    'Welcome to HashTagTrader'
   end
 end
