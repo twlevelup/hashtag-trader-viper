@@ -11,3 +11,4 @@ end
 gem 'sinatra'
 gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
 gem 'haml'
+gem 'unicorn'
