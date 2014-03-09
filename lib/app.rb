@@ -1,5 +1,9 @@
 require 'sinatra'
+require 'erb'
 
-get '/' do
-  'Hello world!'
+class MyApp < Sinatra::Application
+  enable :sessions
+
 end
+
+require_relative 'routes/routes'
