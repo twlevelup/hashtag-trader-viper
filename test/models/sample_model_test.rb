@@ -1,5 +1,6 @@
 require 'minitest/spec'
 require 'minitest/autorun'
+require_relative '../minitest_helper'
 
 describe Array do
   it "can be created with no arguments" do

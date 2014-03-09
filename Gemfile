@@ -5,6 +5,7 @@ group :development, :test do
   gem 'rake'
   gem 'thin'
   gem 'rerun'
+  gem 'turn'
 end
 
 gem 'sinatra'
