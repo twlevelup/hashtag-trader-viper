@@ -12,6 +12,7 @@ GEM
     ffi (1.9.3)
     haml (4.0.5)
       tilt
+    hashie (2.0.5)
     kgio (2.9.2)
     listen (2.7.0)
       celluloid (>= 0.15.2)
@@ -19,6 +20,9 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     nio4r (1.0.0)
+    omniauth (1.2.1)
+      hashie (>= 1.2, < 3)
+      rack (~> 1.0)
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
@@ -52,6 +56,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  omniauth
   rake
   rerun
   sinatra
