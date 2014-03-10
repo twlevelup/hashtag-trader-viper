@@ -10,9 +10,9 @@ class Configuration
     providers = []
 
     if production?
-      providers << {github: [@github_api_key, @github_secret_key]}
+      providers << (OmniAuthProviderConfig.new :github, [@github_api_key, @github_secret_key])
     else
-      providers << {developer: {}}
+      providers << (OmniAuthProviderConfig.new :developer, nil)
     end
 
     providers
@@ -21,5 +21,14 @@ class Configuration
   private
   def production?
     ENV['RACK_ENV'] == 'production'
+  end
+end
+
+class OmniAuthProviderConfig
+  attr_reader :id, :parameters
+
+  def initialize id, parameters
+    @id = id
+    @parameters = parameters || []
   end
 end

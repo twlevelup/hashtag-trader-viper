@@ -15,12 +15,12 @@ describe Configuration do
     end
 
     it "should not include the developer provider" do
-      Configuration.new.omniauth_providers.any? { |provider| provider.keys.include? :developer  }.must_equal false
+      Configuration.new.omniauth_providers.any? { |provider| provider.id == :developer  }.must_equal false
     end
 
     describe "github provider" do
       it "should be included" do
-        Configuration.new.omniauth_providers.must_include :github => [key, secret]
+        Configuration.new.omniauth_providers.any? { |provider| provider.id == :github }.must_equal true
       end
 
       it "should raise an error if api key is not provided" do
@@ -40,11 +40,11 @@ describe Configuration do
       ENV['RACK_ENV'] = 'development'
     end
     it "should include the developer provider" do
-      Configuration.new.omniauth_providers.any? { |provider| provider.keys.include? :developer }.must_equal true
+      Configuration.new.omniauth_providers.any? { |provider| provider.id == :developer }.must_equal true
     end
 
     it "should not include the github provider" do
-      Configuration.new.omniauth_providers.any? { |provider| provider.keys.include? :github }.must_equal false
+      Configuration.new.omniauth_providers.any? { |provider| provider.id == :github }.must_equal false
     end
   end
 end

@@ -20,7 +20,7 @@ class HashTagTraderApp < Sinatra::Base
 
   use OmniAuth::Builder do
     configuration.omniauth_providers.each do |provider_config|
-      provider *provider_config.flatten
+      provider provider_config.id, *provider_config.parameters
     end
   end
 
