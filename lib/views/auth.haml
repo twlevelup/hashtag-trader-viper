@@ -1,0 +1,6 @@
+%h2 Please login
+
+%ul
+	- settings.configuration.omniauth_providers.each do |provider|
+		%a{ href: "/auth/#{provider.flatten[0]}" }= provider.flatten[0]
+

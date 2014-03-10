@@ -4,28 +4,30 @@ require 'sinatra/base'
 require 'sinatra/twitter-bootstrap'
 require 'haml'
 
+require_relative 'configuration'
 require_relative 'routes/index'
 require_relative 'routes/authorization'
 
 class HashTagTraderApp < Sinatra::Base
-  def self.production?
-    ENV['RACK_ENV'] == 'production'
-  end
-  
   set :root, File.dirname(__FILE__)
+
+  configuration = Configuration.new
+  configure do
+    set :configuration, configuration
+  end
 
   enable :sessions
 
   use OmniAuth::Builder do
-    provider :developer unless HashTagTraderApp.production?
-    provider :github, ENV['GITHUB_API_KEY'], ENV['GITHUB_SECRET_KEY']
+    configuration.omniauth_providers.each do |provider_config|
+      provider *provider_config.flatten
+    end
   end
 
   before do
     pass if request.path_info =~ /^\/auth\//
 
-    callback_path = HashTagTraderApp.production? ? 'github' : 'developer'
-    redirect to("/auth/#{callback_path}") unless session[:uid]
+    redirect to("/auth/") unless session[:uid]
   end
 
   register Sinatra::Twitter::Bootstrap::Assets
