@@ -6,6 +6,9 @@ group :development, :test do
   gem 'thin'
   gem 'rerun'
   gem 'turn'
+  gem 'minitest', '<5.0.0'
+  gem 'guard'
+  gem 'guard-minitest'
 end
 
 gem 'sinatra'
