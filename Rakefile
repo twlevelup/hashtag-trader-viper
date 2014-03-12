@@ -11,5 +11,10 @@ end
 
 desc "Run server locally"
 task :server do
-  sh "rerun 'thin start -R config.ru'"
+	thin_command = "thin start -R config.ru"
+	if (ENV['OS'] =~ /Windows/)
+		sh thin_command
+	else
+  	sh "rerun '#{thin_command}'"
+  end
 end

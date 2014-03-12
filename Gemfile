@@ -14,6 +14,9 @@ end
 gem 'sinatra'
 gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
 gem 'haml'
-gem 'unicorn'
 gem 'omniauth'
 gem 'omniauth-github'
+
+group :production do
+	gem 'unicorn'
+end
