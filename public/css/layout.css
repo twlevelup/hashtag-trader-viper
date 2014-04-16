@@ -1,0 +1,104 @@
+body{
+	background-image: url("../images/chat.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top center;
+	background-size: cover;
+}
+
+div.brand{
+	top: 80;
+	padding-top: 5em;
+}
+div.condition {
+	padding-left: 6;
+}
+
+div.condition > label > input{
+	width: 15;
+	height: 15;
+}
+
+div.condition > label > a{
+	font-size: 20;
+}
+
+div.header > h1{
+	font-size: 90;
+	text-align: center;
+	color: crimson;
+}
+
+div.reg-info{
+	font-size: 25;
+	font-weight: 300;
+}
+
+div.reg-userInput{
+	padding-right: 40;
+
+}
+
+div.regbody{
+	padding-left: 40;
+	padding-top: 30;
+	border-radius: 20;
+	height: 27em;
+	background-color: rgba(245, 245, 245, 0.8)
+}
+
+div.frmsubmitbut > div{
+	text-align: center;
+}
+
+div.welcomeMsg{
+	font-size: 30;
+	font-weight: bold;
+}
+
+form.form-horizontal{
+	text-align: left;
+}
+
+div.input-prepend > input{
+	width: 35em !important;
+}
+
+label.frmreg{
+	text-align: left !important;
+	font-size: 20;
+	cursor: default;
+}
+
+ul.catlist > li{
+	width: 120;
+}
+
+ul.catlist > li > input.selectList{
+	width: 15;
+	height: 15;
+}
+
+ul.catlist > li > label{
+	margin-bottom: 5px;
+	vertical-align: sub;
+	display: inline;
+	cursor: default;
+}
+
+ul.usertype > li{
+	width: 120;
+}
+
+ul.usertype > li > input{
+	width: 15;
+	height: 15;
+}
+
+ul.usertype > li > label{
+	margin-bottom: 5px;
+	vertical-align: sub;
+	display: inline;
+	cursor: default;
+}
+

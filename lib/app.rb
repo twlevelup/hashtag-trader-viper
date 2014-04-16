@@ -8,6 +8,9 @@ require 'haml'
 require_relative 'configuration'
 require_relative 'routes/index'
 require_relative 'routes/authorization'
+require_relative 'routes/registration'
+
+require_relative 'helpers/helpers.rb'
 
 class HashTagTraderApp < Sinatra::Base
   set :root, File.dirname(__FILE__)
@@ -25,6 +28,7 @@ class HashTagTraderApp < Sinatra::Base
   configuration = Configuration.new
   configure do
     set :configuration, configuration
+    set :public_folder, 'public' #This is used to set a public folder
   end
 
   use OmniAuth::Builder do
@@ -39,10 +43,11 @@ class HashTagTraderApp < Sinatra::Base
     redirect to("/auth/") unless session[:uid]
   end
 
-
   register Sinatra::Twitter::Bootstrap::Assets
+
+  helpers Sinatra::HashTagTraderApp::Helpers
   
   register HashTagTrader::Routes::Index
   register HashTagTrader::Routes::Authorization
+  register HashTagTrader::Routes::Registration
 end
-
