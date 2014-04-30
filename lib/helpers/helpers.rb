@@ -2,7 +2,7 @@ module Sinatra
 	module HashTagTraderApp
 		module Helpers
 			def base_url
-				"http://localhost:3000/"
+				"https://hashtag-trader-viper.herokuapp.com/"
 			end
 		end
 	end
