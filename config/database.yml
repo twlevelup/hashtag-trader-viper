@@ -10,4 +10,4 @@ production:
  database: hashtag-viper
  username: <%= ENV['PG_USER'] %>
  password: <%= ENV['PG_PASS'] %>
- host: localhost
+ host: <%= ENV['HEROKU_POSTGRESQL_COPPER_URL'] %>
