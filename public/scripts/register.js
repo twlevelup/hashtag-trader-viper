@@ -11,14 +11,6 @@ $(document).ready(function(){
 			chatcount--;
 	});
 
-	$("#id_other").click(function(){
-		if($(this).is(':checked')){
-			$("#id_other_cat").prop('disabled',false).show(300);
-		}
-		else
-			$("#id_other_cat").prop('disabled',true).hide();
-	});
-
 	$("#TC").click(function(){
 		$("#btn_submit").prop('disabled', true);
 

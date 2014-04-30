@@ -17,6 +17,9 @@ gem 'haml'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'rack-ssl-enforcer'
+gem 'activerecord'
+gem 'sinatra-activerecord', ">=2.0.0"
+gem 'pg'
 
 group :production do
 	gem 'unicorn'

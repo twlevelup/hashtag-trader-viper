@@ -5,10 +5,16 @@ require 'sinatra/twitter-bootstrap'
 require 'rack/ssl-enforcer'
 require 'haml'
 
+require 'sinatra'
+require 'sinatra/activerecord'
+require_relative '../config/environments'
+require_relative './models/model'
+
 require_relative 'configuration'
 require_relative 'routes/index'
 require_relative 'routes/authorization'
 require_relative 'routes/registration'
+require_relative 'routes/dashboard'
 
 require_relative 'helpers/helpers.rb'
 
@@ -31,6 +37,13 @@ class HashTagTraderApp < Sinatra::Base
     set :public_folder, 'public' #This is used to set a public folder
   end
 
+  def callback
+    user OmniAuth::Builder do
+      provider:github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+    end
+    redirect_to request.env['omniauth.origin'] || '/default'
+  end
+
   use OmniAuth::Builder do
     configuration.omniauth_providers.each do |provider_config|
       provider provider_config.id, *provider_config.parameters
@@ -50,4 +63,5 @@ class HashTagTraderApp < Sinatra::Base
   register HashTagTrader::Routes::Index
   register HashTagTrader::Routes::Authorization
   register HashTagTrader::Routes::Registration
+  register HashTagTrader::Routes::Dashboard
 end

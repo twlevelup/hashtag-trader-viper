@@ -1,4 +1,6 @@
 require 'rake/testtask'
+require 'sinatra/activerecord/rake'
+require './lib/app'
 
 task :default => [:test]
 
