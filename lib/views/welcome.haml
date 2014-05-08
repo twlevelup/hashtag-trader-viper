@@ -1,0 +1,26 @@
+%link{:href=>'/boot/bootstrap-responsive.min.css', :rel=>'stylesheet', :type=>'text/css'}	
+%link{:href=>'/boot/bootstrap.min.css', :rel=>'stylesheet', :type=>'text/css'}	
+%link{:href=>'/boot/bootstrap.css', :rel=>'stylesheet', :type=>'text/css'}	
+%link{:href=>'/css/welcome.css', :rel=>'stylesheet', :type=>'text/css'}	
+
+.container{:class=>"main"}
+	.row12
+		%h1{:class=>"welcome"}
+			\#HashTagTrader-Viper
+	.row12{:class=>"options"}
+		- settings.configuration.omniauth_providers.each do |provider|
+			%form{:action=>"/auth/login", :method=>"post"}
+				%input{:type=>"hidden", :value=>"login", :id=>"url", :name=>"url"}
+				%input{:type=>"hidden", :value=>"#{provider.id}", :name=>"provider", :id=>"provider"}
+				%button{:class=>"btn btn-danger", :type=>"submit"}
+					%img{:src=>'/images/git.png', :class=>"register"} 
+					%p
+						SIGN IN
+			%form{:action=>"/auth/register", :method=>"post"}
+				%input{:type=>"hidden", :value=>"register", :id=>"url", :name=>"url"}
+				%input{:type=>"hidden", :value=>"#{provider.id}", :name=>"provider", :id=>"provider"}
+				%button{:class=>"btn btn-success", :type=>"submit"}
+					%img{:src=>'/images/user.png', :class=>"register1"} 
+					%p
+						SIGN UP
+					

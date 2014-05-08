@@ -64,13 +64,13 @@
 							.condition
 								%label.checkbox.inline
 									%input{:type=>'checkbox', :id=>'TC'}
-									%a{:href=>"#{base_url}register/toc/", :target=>'_blank'}I accept the terms and conditions
+									%a{:href=>"/register/toc/", :target=>'_blank'}I accept the terms and conditions
 							%br
 							.row.frmsubmitbut
 								.span12	
 									%button.btn.btn-primary.btn-success{:type=>'submit', :id=>'btn_submit', :disabled=>'true'}
 										%b Submit	
 
-%script{:type=>'text/javascript',:src=>	"#{base_url}scripts/bootstrap-tooltip.js"}
-%script{:type=>'text/javascript',:src=> "#{base_url}scripts/register.js"}
-%link{:rel=>'stylesheet',:type=>'text/css',:href=> "#{base_url}css/layout.css"}
+%script{:type=>'text/javascript',:src=>	"/scripts/bootstrap-tooltip.js"}
+%script{:type=>'text/javascript',:src=> "/scripts/register.js"}
+%link{:rel=>'stylesheet',:type=>'text/css',:href=> "/css/layout.css"}

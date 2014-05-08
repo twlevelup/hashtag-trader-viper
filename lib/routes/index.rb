@@ -3,7 +3,7 @@ module HashTagTrader
     module Index
       def self.registered(app)
         app.get '/' do
-          haml :index
+          haml :welcome
         end
       end
     end

@@ -1,5 +1,5 @@
 body{
-	background-image: url("../images/bg4.jpg");
+	background-image: url("/images/bg4.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top center;
@@ -75,7 +75,7 @@ form.frmSearch > input{
 	color: white;
 	text-transform: uppercase;
 	font-weight: bolder;
-	background-image: url("../images/logo.png");
+	background-image: url("/images/logo.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: right;

@@ -1,0 +1,101 @@
+2014-04-30T10:09:15.131659+00:00 heroku[router]: at=info method=GET path=/css/bootstrap.min.css host=hashtag-trader-viper.herokuapp.com request_id=fdb883b9-04a3-40e4-94c6-809f2d4c26ae fwd="203.26.30.226" dyno=web.1 connect=1ms service=9ms status=200 bytes=106644
+2014-04-30T10:09:15.414483+00:00 heroku[router]: at=info method=GET path=/css/bootstrap-responsive.min.css host=hashtag-trader-viper.herokuapp.com request_id=15b6a066-78f0-471f-a8c5-5c4b19da75cd fwd="203.26.30.226" dyno=web.1 connect=2ms service=18ms status=200 bytes=17477
+2014-04-30T10:09:15.716944+00:00 heroku[router]: at=info method=GET path=/js/bootstrap.min.js host=hashtag-trader-viper.herokuapp.com request_id=c8b1a6ec-2c61-4487-9079-c899559607b6 fwd="203.26.30.226" dyno=web.1 connect=1ms service=5ms status=200 bytes=29273
+2014-04-30T10:09:15.728190+00:00 heroku[router]: at=info method=GET path=/js/jquery.min.js host=hashtag-trader-viper.herokuapp.com request_id=ad027e74-45dd-4715-b189-30aa3b2b0f2e fwd="203.26.30.226" dyno=web.1 connect=1ms service=15ms status=200 bytes=94279
+2014-04-30T10:09:17.080095+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=hashtag-trader-viper.herokuapp.com request_id=de5040ee-ec41-4f7b-9d34-7ecf5d5be40d fwd="203.26.30.226" dyno=web.1 connect=1ms service=16ms status=404 bytes=633
+2014-04-30T10:17:37+00:00 heroku[slug-compiler]: Slug compilation started
+2014-04-30T10:18:09.962154+00:00 heroku[api]: Deploy e751e71 by millenamitic@gmail.com
+2014-04-30T10:18:09.962259+00:00 heroku[api]: Release v10 created by millenamitic@gmail.com
+2014-04-30T10:18:10+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-04-30T10:18:10.109914+00:00 heroku[web.1]: State changed from up to starting
+2014-04-30T10:18:13.314562+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2014-04-30T10:18:13.888212+00:00 app[web.1]: Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT
+2014-04-30T10:18:13.924330+00:00 app[web.1]: Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT
+2014-04-30T10:18:13.887461+00:00 app[web.1]: Unicorn master intercepting TERM and sending myself QUIT instead
+2014-04-30T10:18:13.921211+00:00 app[web.1]: Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT
+2014-04-30T10:18:14.075364+00:00 app[web.1]: I, [2014-04-30T10:18:14.075221 #2]  INFO -- : Refreshing Gem list
+2014-04-30T10:18:14.673609+00:00 app[web.1]: (erb):9:in `rescue in <main>': Invalid DATABASE_URL (RuntimeError)
+2014-04-30T10:18:14.673616+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/erb.rb:838:in `eval'
+2014-04-30T10:18:14.673618+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/erb.rb:838:in `result'
+2014-04-30T10:18:14.673615+00:00 app[web.1]: 	from (erb):6:in `<main>'
+2014-04-30T10:18:14.673619+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-activerecord-2.0.1/lib/sinatra/activerecord.rb:32:in `database_file='
+2014-04-30T10:18:14.673631+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1208:in `set'
+2014-04-30T10:18:14.673632+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-activerecord-2.0.1/lib/sinatra/activerecord.rb:20:in `registered'
+2014-04-30T10:18:14.673634+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1391:in `block in register'
+2014-04-30T10:18:14.673635+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1389:in `each'
+2014-04-30T10:18:14.673639+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1389:in `register'
+2014-04-30T10:18:14.673640+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1970:in `register'
+2014-04-30T10:18:14.673641+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:2032:in `register'
+2014-04-30T10:18:14.673642+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-activerecord-2.0.1/lib/sinatra/activerecord.rb:53:in `<module:Sinatra>'
+2014-04-30T10:18:14.673644+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-activerecord-2.0.1/lib/sinatra/activerecord.rb:10:in `<top (required)>'
+2014-04-30T10:18:14.673647+00:00 app[web.1]: 	from /app/lib/app.rb:9:in `require'
+2014-04-30T10:18:14.673648+00:00 app[web.1]: 	from /app/lib/app.rb:9:in `<top (required)>'
+2014-04-30T10:18:14.673649+00:00 app[web.1]: 	from config.ru:3:in `require'
+2014-04-30T10:18:14.673651+00:00 app[web.1]: 	from config.ru:3:in `block in <main>'
+2014-04-30T10:18:14.673652+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+2014-04-30T10:18:14.673655+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+2014-04-30T10:18:14.673657+00:00 app[web.1]: 	from config.ru:1:in `<main>'
+2014-04-30T10:18:14.673656+00:00 app[web.1]: 	from config.ru:1:in `new'
+2014-04-30T10:18:14.673659+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn.rb:48:in `eval'
+2014-04-30T10:18:14.673660+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn.rb:48:in `block in builder'
+2014-04-30T10:18:14.673663+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:760:in `call'
+2014-04-30T10:18:14.673664+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:760:in `build_app!'
+2014-04-30T10:18:14.673665+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:137:in `start'
+2014-04-30T10:18:14.673667+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/bin/unicorn:126:in `<top (required)>'
+2014-04-30T10:18:14.673671+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/bin/unicorn:23:in `<main>'
+2014-04-30T10:18:14.673668+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/bin/unicorn:23:in `load'
+2014-04-30T10:18:14.524716+00:00 app[web.1]: I, [2014-04-30T10:18:14.524630 #2]  INFO -- : reaped #<Process::Status: pid 11 exit 0> worker=2
+2014-04-30T10:18:14.524582+00:00 app[web.1]: I, [2014-04-30T10:18:14.519249 #2]  INFO -- : reaped #<Process::Status: pid 5 exit 0> worker=0
+2014-04-30T10:18:14.726215+00:00 app[web.1]: I, [2014-04-30T10:18:14.726048 #2]  INFO -- : reaped #<Process::Status: pid 8 exit 0> worker=1
+2014-04-30T10:18:14.726356+00:00 app[web.1]: I, [2014-04-30T10:18:14.726291 #2]  INFO -- : master complete
+2014-04-30T10:18:12.756782+00:00 heroku[web.1]: Starting process with command `bundle exec unicorn -p 10547 -c ./config/unicorn.rb`
+2014-04-30T10:18:15.749212+00:00 heroku[web.1]: Process exited with status 1
+2014-04-30T10:18:15.756467+00:00 heroku[web.1]: State changed from starting to crashed
+2014-04-30T10:18:15.757257+00:00 heroku[web.1]: State changed from crashed to starting
+2014-04-30T10:18:19.885240+00:00 app[web.1]: I, [2014-04-30T10:18:19.885084 #2]  INFO -- : Refreshing Gem list
+2014-04-30T10:18:20.461678+00:00 app[web.1]: 	from (erb):6:in `<main>'
+2014-04-30T10:18:20.461695+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/erb.rb:838:in `eval'
+2014-04-30T10:18:20.461712+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/erb.rb:838:in `result'
+2014-04-30T10:18:20.461654+00:00 app[web.1]: (erb):9:in `rescue in <main>': Invalid DATABASE_URL (RuntimeError)
+2014-04-30T10:18:20.461745+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1391:in `block in register'
+2014-04-30T10:18:20.461738+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-activerecord-2.0.1/lib/sinatra/activerecord.rb:32:in `database_file='
+2014-04-30T10:18:20.461741+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1208:in `set'
+2014-04-30T10:18:20.461743+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-activerecord-2.0.1/lib/sinatra/activerecord.rb:20:in `registered'
+2014-04-30T10:18:20.461753+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1970:in `register'
+2014-04-30T10:18:20.461755+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:2032:in `register'
+2014-04-30T10:18:20.461757+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-activerecord-2.0.1/lib/sinatra/activerecord.rb:53:in `<module:Sinatra>'
+2014-04-30T10:18:20.461758+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-activerecord-2.0.1/lib/sinatra/activerecord.rb:10:in `<top (required)>'
+2014-04-30T10:18:20.461793+00:00 app[web.1]: 	from config.ru:1:in `<main>'
+2014-04-30T10:18:20.461794+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn.rb:48:in `eval'
+2014-04-30T10:18:20.461796+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn.rb:48:in `block in builder'
+2014-04-30T10:18:20.461800+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:760:in `call'
+2014-04-30T10:18:20.461752+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1389:in `register'
+2014-04-30T10:18:20.461750+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/sinatra-1.4.5/lib/sinatra/base.rb:1389:in `each'
+2014-04-30T10:18:20.461806+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/bin/unicorn:23:in `load'
+2014-04-30T10:18:20.461808+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/bin/unicorn:23:in `<main>'
+2014-04-30T10:18:20.461760+00:00 app[web.1]: 	from /app/lib/app.rb:9:in `require'
+2014-04-30T10:18:20.461762+00:00 app[web.1]: 	from /app/lib/app.rb:9:in `<top (required)>'
+2014-04-30T10:18:20.461766+00:00 app[web.1]: 	from config.ru:3:in `require'
+2014-04-30T10:18:20.461767+00:00 app[web.1]: 	from config.ru:3:in `block in <main>'
+2014-04-30T10:18:20.461788+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+2014-04-30T10:18:20.461790+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+2014-04-30T10:18:20.461791+00:00 app[web.1]: 	from config.ru:1:in `new'
+2014-04-30T10:18:20.461801+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:760:in `build_app!'
+2014-04-30T10:18:20.461803+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:137:in `start'
+2014-04-30T10:18:20.461805+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/unicorn-4.8.2/bin/unicorn:126:in `<top (required)>'
+2014-04-30T10:18:18.408486+00:00 heroku[web.1]: Starting process with command `bundle exec unicorn -p 36685 -c ./config/unicorn.rb`
+2014-04-30T10:18:16.590913+00:00 heroku[web.1]: Process exited with status 0
+2014-04-30T10:18:21.870366+00:00 heroku[web.1]: State changed from starting to crashed
+2014-04-30T10:18:21.866851+00:00 heroku[web.1]: Process exited with status 1
+2014-04-30T10:18:49.123296+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=hashtag-trader-viper.herokuapp.com request_id=93e28482-be38-4eb0-af75-bd52829caaf1 fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:18:49.894902+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=hashtag-trader-viper.herokuapp.com request_id=a7de1fdb-5075-48e5-8a49-588e081dd8e0 fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:18:56.872437+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=hashtag-trader-viper.herokuapp.com request_id=82288fa5-e30f-4d78-9c4b-8c2b5cd5303d fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:18:57.169133+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=hashtag-trader-viper.herokuapp.com request_id=31825e0c-9ea7-4ccb-9caa-d731b61f28cc fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:19:25.128267+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=hashtag-trader-viper.herokuapp.com request_id=feb72271-b898-4add-9b4c-08d2db386410 fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:19:25.400334+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=hashtag-trader-viper.herokuapp.com request_id=4239404a-55f4-4ce3-9231-d3b6c1dd090e fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:20:45.663449+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=hashtag-trader-viper.herokuapp.com request_id=adfd5c30-0e60-4401-9c02-dce6296d94e3 fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:20:45.949566+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=hashtag-trader-viper.herokuapp.com request_id=8704d141-bbaa-46af-a1b9-e13cc6ccc31f fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:28:18.479729+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=hashtag-trader-viper.herokuapp.com request_id=74fb6407-b738-41d3-94da-3409ea24e0bf fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:28:18.856499+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=hashtag-trader-viper.herokuapp.com request_id=999588b2-d6c8-42e1-8768-6ca7b10b5af2 fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:30:00.209520+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=hashtag-trader-viper.herokuapp.com request_id=69227905-99d7-4d88-82b4-23e6d31befbc fwd="203.26.30.226" dyno= connect= service= status=503 bytes=
+2014-04-30T10:30:00.495984+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/favicon.ico host=hashtag-trader-viper.herokuapp.com request_id=9c6cefac-6074-45e4-9d6a-1020309a58ab fwd="203.26.30.226" dyno= connect= service= status=503 bytes=

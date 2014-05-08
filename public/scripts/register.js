@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 	$("#frm_reg").submit(function(event){
 		if(chatcount <= 0){
-			$(".pick > .frmreg").css('color','red');
+			alert("Please select at least one chat");
 			event.preventDefault();
 		}//
 	});
