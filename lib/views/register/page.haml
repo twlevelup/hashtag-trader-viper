@@ -15,7 +15,8 @@
 						%hr
 						%form.form-horizontal{:id=>'frm_reg', :method=>'post', :action=>'#'}
 							.control-group
-								%label.control-label.frmreg{:for=>'username'} Username
+								%label.control-label.frmreg{:for=>'username'} Username 
+								%p= session[:name]
 								.controls
 									.input-prepend
 										%span.add-on 
