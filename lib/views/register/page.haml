@@ -7,7 +7,10 @@
 		.row-fluid
 			.span12
 				.regbody
-					.welcomeMsg Hi User
+					.welcomeMsg 
+						%p
+							Hi 
+							=session[:name].upcase
 					%br
 					.reg-info
 						%p We just need a few details so you can sign in.
@@ -16,7 +19,6 @@
 						%form.form-horizontal{:id=>'frm_reg', :method=>'post', :action=>'#'}
 							.control-group
 								%label.control-label.frmreg{:for=>'username'} Username 
-								%p= session[:name]
 								.controls
 									.input-prepend
 										%span.add-on 
