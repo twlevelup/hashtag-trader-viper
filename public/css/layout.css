@@ -9,6 +9,7 @@ body{
 div.brand{
 	top: 80;
 	padding-top: 5em;
+	float: right;
 }
 div.condition {
 	padding-left: 6;
@@ -23,8 +24,12 @@ div.condition > label > a{
 	font-size: 20;
 }
 
+div.header{
+	width: 120%;
+}
+
 div.header > h1{
-	font-size: 90;
+	font-size: 85;
 	text-align: center;
 	color: crimson;
 }
@@ -44,7 +49,8 @@ div.regbody{
 	padding-top: 30;
 	border-radius: 20;
 	height: 27em;
-	background-color: rgba(245, 245, 245, 0.8)
+	background-color: rgba(245, 245, 245, 0.8);
+	width: 115%;
 }
 
 div.frmsubmitbut > div{
@@ -62,6 +68,10 @@ form.form-horizontal{
 
 div.input-prepend > input{
 	width: 35em !important;
+}
+
+input.inp_user{
+	max-width: 82% !important;
 }
 
 label.frmreg{

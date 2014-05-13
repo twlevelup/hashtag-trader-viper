@@ -1,5 +1,5 @@
 body{
-	background-image: url("/images/bg4.jpg");
+	background-image: url("/images/chat4.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top center;
@@ -11,25 +11,51 @@ div.navbar-inner{
 	//background-color: rgba(230, 44, 103, 0.82);
 }
 
-div.displayNews{
-	background-color: rgba(231, 130, 82, 0.23);
+div.displayNewsD{
+	background-color: rgba(231, 82, 82, 0.23);
 	border-top-left-radius: 15;
 	border-top-right-radius: 15;
 	border-bottom-left-radius: 10;
 	border-bottom-right-radius: 10;
 }
 
-div.displayNews > div.newsTitle{
+div.displayNewsD > div.newsTitle{
 	color: white;
 	padding-left: 20;
 }
 
-div.displayNews > div.newsBody{
+div.displayNewsD > div.newsBody{
 	background-color: white;
+	padding: 10;
 }
 
-div.displayNews > div.newsFooter{
+div.displayNewsD > div.newsFooter{
 	height: 1;
+}
+
+div.displayNewsU{
+	background-color: rgba(82, 231, 159, 0.23);
+	border-top-left-radius: 15;
+	border-top-right-radius: 15;
+	border-bottom-left-radius: 10;
+	border-bottom-right-radius: 10;
+}
+
+div.displayNewsU > div.newsTitle{
+	color: white;
+	padding-left: 20;
+}
+
+div.displayNewsU > div.newsBody{
+	background-color: white;
+	padding: 10;
+}
+
+div.displayNewsU > div.newsFooter{
+	height: 1;
+	background-color: rgba(82, 231, 159, 0.23);
+	border-bottom-left-radius: 10;
+	border-bottom-right-radius: 10;
 }
 
 
@@ -52,6 +78,58 @@ div.displayStatistics > div.newsBody{
 
 div.displayStatistics > div.newsFooter{
 	height: 1;
+}
+
+div.mymenu{
+	position: absolute;
+	right: 10px;
+	text-align: right;
+	font-size: 100em;
+	font-size: ;
+	zoom: 2;
+	-moz-transform: scale(2);
+}
+
+div.mymenu > div > button {
+	position: absolute;
+	top: -3px;
+	right: 0px;
+	border-bottom-color: rgb(162, 7, 7);
+	border-left-color: yellow;
+	border-right-color: blue;
+	border-top-color: green;
+	background-image: url("/images/logo.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-color: white;
+	border-radius: 10;
+	height: 17;
+	width: 30;
+}
+
+div.mymenu > div > button:hover {
+	position: absolute;
+	top: -3px;
+	right: 0px;
+	border-bottom-color: rgb(162, 7, 7);
+	border-left-color: yellow;
+	border-right-color: blue;
+	border-top-color: green;
+	background-image: url("/images/logo.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-color: white;
+	border-radius: 10;
+	height: 17;
+	width: 30;
+}
+
+div.mymenu > div > button > p{
+	color: rgb(162, 103, 0);
+	position: absolute;
+	top: -2px;
 }
 
 div.navbar-inner{
@@ -82,6 +160,13 @@ form.frmSearch > input{
 	background-color: rgb(79, 149, 182);
 }
 
+h2.logout{
+	bottom: 10px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
 li.userDetails{
 	width: 11.5em;
 }
@@ -89,6 +174,10 @@ li.userDetails{
 li.userDetails > ul.dropdown-menu > li{
 	height: 2em;
 	padding-left: 0.5em;
+}
+
+table.display{
+	background-color: white;
 }
 
 ul.dpMenuTradings{

@@ -1,19 +1,38 @@
 %html
-  %head
-    = bootstrap_assets
-  %body
-    - container :fluid do
-      - row do
-        = yield
+	%head
+		= bootstrap_assets
+		%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/normalize.css'}
+		-#%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/demo.css'}
+		-#%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/icons.css'}
+		%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/component.css'}
+		%script{:src=>'/scripts/modernizr.custom.js'}
 
-//Original
-//%html
-//  %head
-//    = bootstrap_assets
-//  %body
-//    - container :fluid do
-//      - row do
-//        - span3 do
-//          = yield
-//        - span5 :offset => 4 do
-//          %p= session[:name]
+	%body
+		.div{:id=>'st-container', :class=>'st-container'}
+			%nav{:class=>'st-menu st-effect-9', :id=>'menu-9'}
+				%h2
+					Welcome 
+					=session[:name].upcase
+				%ul
+					%li
+						%a{:href=>'/dashboard/'} Dashboard
+					%li
+						%a{:href=>'#'} Balance Book
+					%li
+						%a{:href=>'#'} Portfolio
+					%li
+						%a{:href=>'#'} Trade
+				%a#id_logout{:href=>'/auth/logout'}
+					%h2{:class=>'logout'}
+						Log Out
+
+			.div{:class=>'st-pusher'}
+				.div{:class=>'st-content'}
+					.div{:class=>'st-content-inner'}
+						.div{:class=>'main clearfix'}
+							- container :fluid do
+								- row do
+									= yield
+
+	%script{:src=>'/scripts/classie.js'}
+	%script{:src=>'/scripts/sidebarEffects.js'}

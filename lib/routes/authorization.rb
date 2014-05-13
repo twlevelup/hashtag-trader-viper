@@ -17,9 +17,15 @@ module HashTagTrader
           redirect to("/auth/#{params[:provider]}")
         end
 
+        app.get'/auth/logout' do
+          session.clear
+          redirect to("/")
+        end
+
         app.post '/auth/developer/callback' do
           session[:uid] = env['omniauth.auth']['uid']
           session[:name] = env['omniauth.auth'][:info][:name]
+          
           if session[:url] == "login"
             redirect to('/dashboard/')
           elsif session[:url] == "register"

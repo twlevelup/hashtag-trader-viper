@@ -1,79 +1,89 @@
-.span4
-.span8.brand
-	.header
-		%h1 #HashTag Traders
-		%hr
-	.container-fluid
-		.row-fluid
-			.span12
-				.regbody
-					.welcomeMsg 
-						%p
-							Hi 
-							=session[:name].upcase
-					%br
-					.reg-info
-						%p We just need a few details so you can sign in.
-					.reg-userInput
+%html
+	%head
+		%title
+			Register
+		%link{:href=>'/boot/bootstrap-responsive.min.css', :rel=>'stylesheet', :type=>'text/css'}	
+		%link{:href=>'/boot/bootstrap.min.css', :rel=>'stylesheet', :type=>'text/css'}	
+		%link{:href=>'/boot/bootstrap.css', :rel=>'stylesheet', :type=>'text/css'}	
+		%link{:rel=>'stylesheet',:type=>'text/css',:href=> "/css/layout.css"}
+	%body
+		.container
+			.row12
+				.span4
+				.span8.brand
+					.header
+						%h1 #HashTag Traders
 						%hr
-						%form.form-horizontal{:id=>'frm_reg', :method=>'post', :action=>'#'}
-							.control-group
-								%label.control-label.frmreg{:for=>'username'} Username 
-								.controls
-									.input-prepend
-										%span.add-on 
-											%i.icon-user{:style=>'vertical-align: middle;'}			
-										%input.span12{:type=>'text', :id=>'username', :placeholder=>'Please enter your username', :maxlength=>'20', :required=>'true', :pattern=>'.{6,20}', :oninvalid=>'this.setCustomValidity("Please input a username between 6-20 characters")', :oninput=>'this.setCustomValidity("")'}
-							.pick
-								%label.frmreg Like Cats?
-								%ul.inline.catlist
-									%li
-										%input.selectList{:type=>'checkbox', :value=>'bengal', :id=>'id_bengal'}
-											%label Bengal
-									%li
-										%input.selectList{:type=>'checkbox', :value=>'manx', :id=>'id_manx'}
-											%label Manx
-									%li
-										%input.selectList{:type=>'checkbox', :value=>'burmese', :id=>'id_burmese'}
-											%label Burmese
-									%li
-										%input.selectList{:type=>'checkbox', :value=>'ragdoll', :id=>'id_ragdoll'}
-											%label Ragdoll
-									%li
-										%input.selectList{:type=>'checkbox', :value=>'siamese', :id=>'id_siamese'}
-											%label Siamese
-									%li
-										%input.selectList{:type=>'checkbox', :value=>'tonkinese', :id=>'id_tonkinese'}
-											%label Tonkinese
-									%li
-										%input.selectList{:type=>'checkbox', :value=>'tabby', :id=>'id_tabby'}
-											%label Tabby
-									%li
-										%input.selectList{:type=>'checkbox', :value=>'scottich fold', :id=>'id_scottish_fold'}
-											%label Scottich Fold
-							.type
-								%ul.inline.usertype
-									%li
-										%label.frmreg User Type
-									%li
-										%input{:type=>'radio', :name=>'userType', :id=>'casual', :checked=>'true'}
-											%label Casual user
-									%li
-										%input{:type=>'radio', :name=>'userType', :id=>'power'}
-											%label Power user
-									%li
-										%a{:href=>'#', :id=>"tooltipinfo", :data=>{:toogle=>'tooltip',:placement=>'right',:original=>{:title=>'More Information'}}}
-											%i.icon-info-sign{:style=>'vertical-align: middle;'}
-							.condition
-								%label.checkbox.inline
-									%input{:type=>'checkbox', :id=>'TC'}
-									%a{:href=>"/register/toc/", :target=>'_blank'}I accept the terms and conditions
-							%br
-							.row.frmsubmitbut
-								.span12	
-									%button.btn.btn-primary.btn-success{:type=>'submit', :id=>'btn_submit', :disabled=>'true'}
-										%b Submit	
-
-%script{:type=>'text/javascript',:src=>	"/scripts/bootstrap-tooltip.js"}
-%script{:type=>'text/javascript',:src=> "/scripts/register.js"}
-%link{:rel=>'stylesheet',:type=>'text/css',:href=> "/css/layout.css"}
+					.container-fluid
+						.row-fluid
+							.span12
+								.regbody
+									.welcomeMsg 
+										%p
+											Hi 
+											=session[:name].upcase
+									%br
+									.reg-info
+										%p We just need a few more details before you can sign in.
+									.reg-userInput
+										%hr
+										%form.form-horizontal{:id=>'frm_reg', :method=>'post', :action=>'#'}
+											.control-group
+												%label.control-label.frmreg{:for=>'username'} Username 
+												.controls
+													.input-prepend
+														%span.add-on 
+															%i.icon-user{:style=>'vertical-align: middle;'}			
+														%input.span12.inp_user{:type=>'text', :id=>'username', :placeholder=>'Please enter your username', :maxlength=>'20', :required=>'true', :pattern=>'.{6,20}', :oninvalid=>'this.setCustomValidity("Please input a username between 6-20 characters")', :oninput=>'this.setCustomValidity("")'}
+											.pick
+												%label.frmreg Like Cats?
+												%ul.inline.catlist
+													%li
+														%input.selectList{:type=>'checkbox', :value=>'bengal', :id=>'id_bengal'}
+															%label Bengal
+													%li
+														%input.selectList{:type=>'checkbox', :value=>'manx', :id=>'id_manx'}
+															%label Manx
+													%li
+														%input.selectList{:type=>'checkbox', :value=>'burmese', :id=>'id_burmese'}
+															%label Burmese
+													%li
+														%input.selectList{:type=>'checkbox', :value=>'ragdoll', :id=>'id_ragdoll'}
+															%label Ragdoll
+													%li
+														%input.selectList{:type=>'checkbox', :value=>'siamese', :id=>'id_siamese'}
+															%label Siamese
+													%li
+														%input.selectList{:type=>'checkbox', :value=>'tonkinese', :id=>'id_tonkinese'}
+															%label Tonkinese
+													%li
+														%input.selectList{:type=>'checkbox', :value=>'tabby', :id=>'id_tabby'}
+															%label Tabby
+													%li
+														%input.selectList{:type=>'checkbox', :value=>'scottich fold', :id=>'id_scottish_fold'}
+															%label Scottich Fold
+											.type
+												%ul.inline.usertype
+													%li
+														%label.frmreg User Type
+													%li
+														%input{:type=>'radio', :name=>'userType', :id=>'casual', :checked=>'true'}
+															%label Casual user
+													%li
+														%input{:type=>'radio', :name=>'userType', :id=>'power'}
+															%label Power user
+													%li
+														%a{:href=>'#', :id=>"tooltipinfo", :data=>{:toogle=>'tooltip',:placement=>'right',:original=>{:title=>'More Information'}}}
+															%i.icon-info-sign{:style=>'vertical-align: middle;'}
+											.condition
+												%label.checkbox.inline
+													%input{:type=>'checkbox', :id=>'TC'}
+													%a{:href=>"/register/toc/", :target=>'_blank'}I accept the terms and conditions
+											%br
+											.row.frmsubmitbut
+												.span12	
+													%button.btn.btn-primary.btn-success{:type=>'submit', :id=>'btn_submit', :disabled=>'true'}
+														%b Submit
+		%script{:type=>'text/javascript',:src=> "/scripts/jquery-1.11.1.min.js"}
+		%script{:type=>'text/javascript',:src=>	"/scripts/bootstrap-tooltip.js"}
+		%script{:type=>'text/javascript',:src=> "/scripts/register.js"}
